@@ -1,4 +1,4 @@
-<aside class="col-md-4 site-sidebar sticky-top sticky-offset border vh-100 overflow-auto">
+<aside class="col-md-4 site-sidebar sticky-top sticky-offset vh-100 overflow-auto">
     <!-- Read Next Widget -->
     <section class="widget card mb-4">
         <div class="card-body">
