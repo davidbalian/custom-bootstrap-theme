@@ -47,3 +47,10 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+.site-sidebar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: sticky;
+    top: 8rem;
+}

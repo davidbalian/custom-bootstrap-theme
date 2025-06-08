@@ -1,4 +1,4 @@
-<aside class="col-md-4">
+<aside class="col-md-4 site-sidebar">
     <!-- Read Next Widget -->
     <section class="widget card mb-4">
         <div class="card-body">
