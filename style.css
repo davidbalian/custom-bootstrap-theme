@@ -73,6 +73,8 @@ h2.text-dark a {
 .site-sidebar {
     border-left: 1px solid #e0e0e0;
     background: none;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .site-sidebar .widget,
