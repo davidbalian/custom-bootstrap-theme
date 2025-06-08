@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <div class="row site-body">
-    <main class="col-md-8" role="main">
+    <main class="col-12 col-md-8" role="main">
         <div class="row">
             <?php
             if ( have_posts() ) :
