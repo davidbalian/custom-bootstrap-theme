@@ -20,18 +20,40 @@
                     <div class="col-md-3 mb-3 mb-md-0">
                         <h5>Recent News</h5>
                         <ul class="list-unstyled">
-                            <li><strong>New Office Opening</strong><br><small class="text-muted">June 22, 2023</small></li>
-                            <li class="mt-2"><strong>Website Redesign Launched</strong><br><small class="text-muted">May 14, 2023</small></li>
-                            <li class="mt-2"><strong>Team Retreat in Bali</strong><br><small class="text-muted">February 10, 2023</small></li>
+                            <li class="mb-3">
+                                <div><strong>New Office Opening</strong></div>
+                                <div><small class="text-secondary" style="opacity:0.6;">June 22, 2023</small></div>
+                                <hr class="my-2" style="opacity:0.2;">
+                            </li>
+                            <li class="mb-3">
+                                <div><strong>Website Redesign Launched</strong></div>
+                                <div><small class="text-secondary" style="opacity:0.6;">May 14, 2023</small></div>
+                                <hr class="my-2" style="opacity:0.2;">
+                            </li>
+                            <li>
+                                <div><strong>Team Retreat in Bali</strong></div>
+                                <div><small class="text-secondary" style="opacity:0.6;">February 10, 2023</small></div>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3 mb-3 mb-md-0">
                         <h5>Custom Footer Menu</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">How can we help you, Number?</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">We have Mission & Vision, bro</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Take a look at our Portfolio</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Get a quote on your new project</a></li>
+                            <li class="mb-3">
+                                <div><a href="#" class="text-white text-decoration-none">How can we help you, Number?</a></div>
+                                <hr class="my-2" style="opacity:0.2;">
+                            </li>
+                            <li class="mb-3">
+                                <div><a href="#" class="text-white text-decoration-none">We have Mission & Vision, bro</a></div>
+                                <hr class="my-2" style="opacity:0.2;">
+                            </li>
+                            <li class="mb-3">
+                                <div><a href="#" class="text-white text-decoration-none">Take a look at our Portfolio</a></div>
+                                <hr class="my-2" style="opacity:0.2;">
+                            </li>
+                            <li>
+                                <div><a href="#" class="text-white text-decoration-none">Get a quote on your new project</a></div>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3">
