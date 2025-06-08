@@ -22,6 +22,10 @@ endif;
 // Enqueue styles, scripts, and register sidebars
 function custom_bootstrap_theme_scripts() {
     wp_enqueue_style('custom_bootstrap_theme_style', get_stylesheet_uri());
+
+    // Enqueue Bootstrap CSS and JS from CDN
+    wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.3' );
+    wp_enqueue_script( 'bootstrap-bundle-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), '5.3.3', true );
     
     register_sidebar(array(
         'name' => __('Sidebar', 'custom_bootstrap_theme'),
