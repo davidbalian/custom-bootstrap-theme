@@ -14,11 +14,11 @@ get_header();
 <div class="row site-body">
     <main class="col-md-8" role="main">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <h1 class="display-4 my-5 text-center"><?php the_title(); ?></h1>
+            <h1 class="display-4 mt-4 mb-4"><?php the_title(); ?></h1>
             <?php
             $content = trim( get_the_content() );
             if ( empty( $content ) ) : ?>
-                <p class="text-center">No content</p>
+                <p>No content</p>
             <?php endif; ?>
         <?php endwhile; endif; ?>
     </main>
