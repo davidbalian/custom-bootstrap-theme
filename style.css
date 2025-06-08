@@ -49,8 +49,10 @@
 }
 
 .site-sidebar {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    position: sticky;
-    top: 8rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sticky-offset {
+  top: 8rem !important;
 }
