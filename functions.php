@@ -56,3 +56,47 @@ add_filter('nav_menu_link_attributes', function($atts, $item, $args) {
     }
     return $atts;
 }, 10, 3);
+
+// Register footer widget areas
+function custom_bootstrap_theme_footer_widgets() {
+    register_sidebar(array(
+        'name'          => __('Footer About', 'custom-bootstrap-theme'),
+        'id'            => 'footer-about',
+        'description'   => __('Add widgets here to appear in the footer about section.', 'custom-bootstrap-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer News', 'custom-bootstrap-theme'),
+        'id'            => 'footer-news',
+        'description'   => __('Add widgets here to appear in the footer news section.', 'custom-bootstrap-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Menu', 'custom-bootstrap-theme'),
+        'id'            => 'footer-menu',
+        'description'   => __('Add widgets here to appear in the footer menu section.', 'custom-bootstrap-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+
+    register_sidebar(array(
+        'name'          => __('Footer Newsletter', 'custom-bootstrap-theme'),
+        'id'            => 'footer-newsletter',
+        'description'   => __('Add widgets here to appear in the footer newsletter section.', 'custom-bootstrap-theme'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+}
+add_action('widgets_init', 'custom_bootstrap_theme_footer_widgets');
