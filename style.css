@@ -56,3 +56,7 @@
 .sticky-offset {
   top: 2rem !important;
 }
+
+footer p {
+  opacity: 0.2;
+}
