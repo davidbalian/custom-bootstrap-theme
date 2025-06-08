@@ -316,6 +316,7 @@ footer p {
     margin-bottom: 0.5rem;
     border: none;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .tag-badge:hover {
