@@ -117,38 +117,21 @@ footer p {
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: #343a40;
-        padding: 1rem 0;
+        padding: 1rem;
         margin-top: 0;
         border-radius: 0;
-        position: fixed;
-        top: 4rem; /* height of navbar */
+        position: absolute;
+        width: 100%;
         left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1050;
-        overflow-y: auto;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        transition: transform 0.3s ease;
+        top: 4rem;
+        z-index: 1000;
     }
+
     .navbar-nav {
         gap: 0.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
     }
+
     .navbar-nav .nav-link {
-        padding: 1rem 2rem;
-        width: 100%;
-    }
-    /* Backdrop overlay for mobile menu */
-    .navbar-collapse.show::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0,0,0,0.4);
-        z-index: -1;
+        padding: 0.75rem 1rem;
     }
 }
