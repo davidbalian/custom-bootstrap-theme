@@ -143,9 +143,6 @@ footer p {
 
 /* Mobile Menu Styles */
 @media (max-width: 991.98px) {
-  main {
-    width: 100% !important;
-  }
     .navbar-collapse {
         background-color: #343a40;
         padding: 1rem;
@@ -168,6 +165,10 @@ footer p {
 
     .site-sidebar {
         display: none !important;
+    }
+
+    main {
+      width: 100% !important;
     }
 }
 
