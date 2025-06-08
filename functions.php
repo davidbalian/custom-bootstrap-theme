@@ -49,3 +49,10 @@ function customtheme_register_menus() {
     );
 }
 add_action('after_setup_theme', 'customtheme_register_menus');
+
+add_filter('nav_menu_link_attributes', function($atts, $item, $args) {
+    if ($args->theme_location === 'primary') {
+        $atts['class'] = (isset($atts['class']) ? $atts['class'] . ' ' : '') . 'nav-link';
+    }
+    return $atts;
+}, 10, 3);
