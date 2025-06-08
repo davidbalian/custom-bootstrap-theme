@@ -14,30 +14,62 @@
     </section>
 
     <!-- Tabbed Content Widget: Recent & Popular -->
-    <section class="widget card mb-4">
-        <div class="card-body">
-            <h5 class="card-title">Tabbed Content Widget</h5>
-            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="recent-tab" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-controls="recent" aria-selected="true">Recent</button>
+    <section class="widget tabbed-widget mb-4">
+        <div>
+            <div class="tabbed-widget-header">Tabbed Content Widget</div>
+            <ul class="tabbed-widget-tabs" id="myTab" role="tablist">
+                <li class="tabbed-widget-tab" role="presentation">
+                    <button class="tabbed-widget-link active" id="recent-tab" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-controls="recent" aria-selected="true">Recent</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="popular-tab" data-bs-toggle="tab" data-bs-target="#popular" type="button" role="tab" aria-controls="popular" aria-selected="false">Popular</button>
+                <li class="tabbed-widget-tab" role="presentation">
+                    <button class="tabbed-widget-link" id="popular-tab" data-bs-toggle="tab" data-bs-target="#popular" type="button" role="tab" aria-controls="popular" aria-selected="false">Popular</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Featured Posts Slideshow <br><small class="text-muted">April 1, 2024</small></a></li>
-                        <li><a href="#">Powerful Theme Options <br><small class="text-muted">March 28, 2024</small></a></li>
-                        <li><a href="#">Supports Custom Background <br><small class="text-muted">March 15, 2024</small></a></li>
+                    <ul class="tabbed-widget-list">
+                        <?php
+                        $recent_query = new WP_Query(array(
+                            'posts_per_page' => 3,
+                            'post_status' => 'publish',
+                        ));
+                        while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
+                            <li class="tabbed-widget-list-item d-flex mb-3">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <div class="tabbed-widget-thumb me-2">
+                                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid rounded')); ?></a>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="tabbed-widget-info">
+                                    <a class="tabbed-widget-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
+                                    <small class="tabbed-widget-date text-muted"><?php echo get_the_date('F j, Y'); ?></small>
+                                </div>
+                            </li>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="popular" role="tabpanel" aria-labelledby="popular-tab">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Why Everyone Loves WordPress <br><small class="text-muted">May 10, 2024</small></a></li>
-                        <li><a href="#">Top 5 Theme Customization Tips <br><small class="text-muted">April 20, 2024</small></a></li>
-                        <li><a href="#">Building a Blog from Scratch <br><small class="text-muted">March 5, 2024</small></a></li>
+                    <ul class="tabbed-widget-list">
+                        <?php
+                        $popular_query = new WP_Query(array(
+                            'posts_per_page' => 3,
+                            'post_status' => 'publish',
+                            'orderby' => 'comment_count',
+                            'order' => 'DESC',
+                        ));
+                        while ($popular_query->have_posts()) : $popular_query->the_post(); ?>
+                            <li class="tabbed-widget-list-item d-flex mb-3">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <div class="tabbed-widget-thumb me-2">
+                                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid rounded')); ?></a>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="tabbed-widget-info">
+                                    <a class="tabbed-widget-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
+                                    <small class="tabbed-widget-date text-muted"><?php echo get_the_date('F j, Y'); ?></small>
+                                </div>
+                            </li>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </ul>
                 </div>
             </div>

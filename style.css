@@ -174,3 +174,93 @@ footer p {
 .read-next-widget a:hover {
     text-decoration: underline;
 }
+
+/* Tabbed Content Widget Styles */
+.tabbed-widget {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.tabbed-widget-header {
+    background: #174a8c;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 0;
+}
+.tabbed-widget-tabs {
+    display: flex;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 0 1.2rem;
+    list-style: none;
+}
+.tabbed-widget-tab {
+    margin: 0;
+}
+.tabbed-widget-link {
+    background: none;
+    border: none;
+    color: #222;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem 0.5rem 0;
+    margin-right: 0.5rem;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+.tabbed-widget-link.active, .tabbed-widget-link:focus {
+    color: #174a8c;
+    border-bottom: 3px solid #174a8c;
+    background: #fff;
+}
+.tabbed-widget-list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1.2rem 0 1.2rem;
+}
+.tabbed-widget-list-item {
+    align-items: flex-start;
+}
+.tabbed-widget-thumb {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabbed-widget-thumb img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.tabbed-widget-info {
+    flex: 1;
+    min-width: 0;
+}
+.tabbed-widget-title {
+    color: #174a8c;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+}
+.tabbed-widget-title:hover {
+    text-decoration: underline;
+}
+.tabbed-widget-date {
+    font-size: 0.92rem;
+    color: #888;
+}
