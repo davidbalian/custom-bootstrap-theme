@@ -323,3 +323,10 @@ footer p {
     background: #d1d5db;
     color: #174a8c;
 }
+
+/* Make the main container wider on large screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1320px;
+  }
+}
