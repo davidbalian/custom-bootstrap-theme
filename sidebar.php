@@ -1,9 +1,9 @@
 <aside class="col-md-4 site-sidebar sticky-top sticky-offset vh-100 overflow-auto">
     <!-- Read Next Widget -->
-    <section class="widget card mb-4">
-        <div class="card-body">
+    <section class="widget read-next-widget mb-4">
+        <div>
             <h5 class="card-title">Read next...</h5>
-            <ul class="list-unstyled">
+            <ul>
                 <li><a href="#">Email Encryption Explained</a></li>
                 <li><a href="#">Selling a Function of Design</a></li>
                 <li><a href="#">It's Hard To Come Up With Dummy Titles</a></li>

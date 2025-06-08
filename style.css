@@ -134,4 +134,43 @@ footer p {
     .navbar-nav .nav-link {
         padding: 0.75rem 1rem;
     }
+
+    .site-sidebar {
+        display: none !important;
+    }
+}
+
+/* Read Next Widget Styles */
+.read-next-widget {
+    background: #fafbfc;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.read-next-widget .card-title {
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+    margin: -1rem -1.2rem 1rem -1.2rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+}
+.read-next-widget ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+.read-next-widget li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+    color: #444;
+}
+.read-next-widget a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.read-next-widget a:hover {
+    text-decoration: underline;
 }
