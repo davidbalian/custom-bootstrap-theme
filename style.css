@@ -48,6 +48,10 @@
   background: #23282c;
 }
 
+h2.text-dark a {
+    color: #212529 !important;
+}
+
 .post-thumbnail-container {
     width: 150px;
     height: 150px;
