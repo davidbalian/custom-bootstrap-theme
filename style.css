@@ -65,15 +65,14 @@ h2.text-dark a {
     border-radius: 50%;
 }
 
-.site-body {
+.site-body, .site-sidebar {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 .site-sidebar {
-    border-left: 2px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
     background: none;
-    padding-left: 1.5rem;
 }
 
 .site-sidebar .widget,
