@@ -1,4 +1,4 @@
-<aside class="col-md-3 site-sidebar sticky-top sticky-offset vh-100 overflow-auto">
+<aside class="col-md-3 site-sidebar sticky-top sticky-offset">
     <!-- Read Next Widget -->
     <section class="widget read-next-widget mb-4">
         <div>
