@@ -59,9 +59,9 @@
                     <div class="col-md-3">
                         <h5>Sign Up for Newsletter</h5>
                         <p>Sign up for our monthly newsletter and stay informed on new services and projects. There will be some freebies along the way. We do not spam!</p>
-                        <form class="d-flex">
+                        <form class="d-flex footer-newsletter-form">
                             <input type="email" class="form-control me-2" placeholder="Email Address">
-                            <button class="btn btn-primary" type="submit">&gt;</button>
+                            <button class="btn btn-dark d-flex align-items-center justify-content-center" type="submit"><i class="bi bi-arrow-right"></i></button>
                         </form>
                     </div>
                 </div>

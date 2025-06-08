@@ -60,3 +60,29 @@
 footer p {
   opacity: 0.2;
 }
+
+.footer-newsletter-form .form-control {
+  background: #23282c;
+  border: 1px solid #444;
+  color: #fff;
+  opacity: 1;
+  font-size: 1rem;
+}
+.footer-newsletter-form .form-control::placeholder {
+  color: #bbb;
+  opacity: 0.5;
+}
+.footer-newsletter-form .btn-dark {
+  background: #23282c;
+  border: 1px solid #444;
+  color: #fff;
+  height: 100%;
+  padding: 0 1rem;
+  opacity: 1;
+}
+.footer-newsletter-form .btn-dark:active,
+.footer-newsletter-form .btn-dark:focus {
+  background: #23282c;
+  color: #fff;
+  box-shadow: none;
+}
