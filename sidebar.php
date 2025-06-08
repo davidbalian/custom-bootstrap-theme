@@ -85,7 +85,8 @@
                 $tags = get_tags(array(
                     'orderby' => 'count',
                     'order' => 'DESC',
-                    'number' => 20 // Limit to 20 most used tags
+                    'hide_empty' => false,
+                    'number' => 20
                 ));
                 
                 if ($tags) :
