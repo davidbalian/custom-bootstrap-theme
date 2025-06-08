@@ -6,27 +6,44 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'card bg-light mb-4 rounded p-3' ); ?>>
-    <?php if ( has_post_thumbnail() ) : // Check if the post has a featured image ?>
-        <div class="d-flex justify-content-center mb-3">
+    <?php if ( has_post_thumbnail() ) : ?>
+        <figure class="d-flex justify-content-center mb-3">
             <div class="post-thumbnail-container rounded-circle overflow-hidden d-flex justify-content-center align-items-center">
-                <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" class="img-fluid" alt="<?php the_title_attribute(); ?>">
+                <?php the_post_thumbnail( 'medium', array(
+                    'class' => 'img-fluid',
+                    'alt' => get_the_title() . ' - Featured Image'
+                )); ?>
             </div>
-        </div>
+        </figure>
     <?php endif; ?>
 
     <div class="card-body text-center">
-        <h2 class="card-title text-dark"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h2>
-        <p class="card-text">
-            <small class="text-muted">
-                <?php the_time( 'F j, Y' ); ?> by <?php the_author(); ?>
-            </small>
-        </p>
-        <hr class="my-3 border-secondary-subtle"> <!-- Very light gray separator -->
+        <header>
+            <h2 class="card-title text-dark">
+                <a href="<?php the_permalink(); ?>" class="text-decoration-none" rel="bookmark"><?php the_title(); ?></a>
+            </h2>
+            <p class="card-text">
+                <small class="text-muted">
+                    <?php echo sprintf(
+                        /* translators: %1$s: post date, %2$s: post author */
+                        esc_html__( '%1$s by %2$s', 'your-theme-textdomain' ),
+                        get_the_time( 'F j, Y' ),
+                        get_the_author()
+                    ); ?>
+                </small>
+            </p>
+        </header>
+
+        <hr class="my-3 border-secondary-subtle">
+        
         <div class="card-text text-start">
-            <?php the_excerpt(); // Displays a short summary of the post content ?>
+            <?php the_excerpt(); ?>
         </div>
-        <div class="d-flex justify-content-end">
-            <a href="<?php the_permalink(); ?>" class="btn btn-success mt-3 rounded">Read More</a>
-        </div>
+        
+        <footer class="d-flex justify-content-end">
+            <a href="<?php the_permalink(); ?>" class="btn btn-success mt-3 rounded" aria-label="<?php echo esc_attr( sprintf( __( 'Read more about %s', 'your-theme-textdomain' ), get_the_title() ) ); ?>">
+                <?php esc_html_e( 'Read More', 'your-theme-textdomain' ); ?>
+            </a>
+        </footer>
     </div>
 </article>

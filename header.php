@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <?php bloginfo( 'name' ); ?>
@@ -25,6 +26,7 @@
                         'container'      => false,
                         'menu_class'     => 'navbar-nav',
                         'fallback_cb'    => '__return_false',
+                        'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar">%3$s</ul>',
                     ) );
                     ?>
                 </div>
@@ -32,6 +34,7 @@
         </nav>
     </header>
 
-    <div class="site-content container">
-        <div class="row">
-            <main class="col-md-12">
+    <div class="site-content">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-12">
