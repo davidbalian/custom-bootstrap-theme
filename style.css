@@ -315,4 +315,10 @@ footer p {
     display: inline-block;
     margin-bottom: 0.5rem;
     border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.tag-badge:hover {
+    background: #d1d5db;
+    color: #174a8c;
 }
