@@ -77,18 +77,18 @@
     </section>
 
     <!-- Tags Widget -->
-    <section class="widget card">
-        <div class="card-body">
-            <h5 class="card-title">Tags</h5>
-            <div class="d-flex flex-wrap">
-                <span class="badge text-bg-light m-1">OpenPGP</span>
-                <span class="badge text-bg-light m-1">Django</span>
-                <span class="badge text-bg-light m-1">Bitcoin</span>
-                <span class="badge text-bg-light m-1">Security</span>
-                <span class="badge text-bg-light m-1">GNU/Linux</span>
-                <span class="badge text-bg-light m-1">Git</span>
-                <span class="badge text-bg-light m-1">Homebrew</span>
-                <span class="badge text-bg-light m-1">Debian</span>
+    <section class="widget tags-widget">
+        <div>
+            <h5 class="tags-widget-title">Tags</h5>
+            <div class="tags-widget-list d-flex flex-wrap">
+                <span class="tag-badge m-1">OpenPGP</span>
+                <span class="tag-badge m-1">Django</span>
+                <span class="tag-badge m-1">Bitcoin</span>
+                <span class="tag-badge m-1">Security</span>
+                <span class="tag-badge m-1">GNU/Linux</span>
+                <span class="tag-badge m-1">Git</span>
+                <span class="tag-badge m-1">Homebrew</span>
+                <span class="tag-badge m-1">Debian</span>
             </div>
         </div>
     </section>
