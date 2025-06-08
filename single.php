@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <div class="row site-body">
-    <main class="col-12 col-md-8" role="main">
+    <main class="col-md-8" role="main">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class('single-post-article card bg-white mb-4 p-4 border-0'); ?> style="border-radius: 12px;">
                 <?php if ( has_post_thumbnail() ) : ?>
