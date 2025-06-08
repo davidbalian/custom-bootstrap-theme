@@ -6,9 +6,29 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="site-header container">
-        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-        <p><?php bloginfo( 'description' ); ?></p>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                        'menu_class'     => 'navbar-nav',
+                        'fallback_cb'    => '__return_false',
+                    ) );
+                    ?>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <div class="site-content container">
