@@ -5,20 +5,24 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card bg-light mb-4 rounded' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card bg-light mb-4 rounded p-3' ); ?>>
     <?php if ( has_post_thumbnail() ) : // Check if the post has a featured image ?>
-        <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" class="card-img-top img-fluid rounded-5" alt="<?php the_title_attribute(); ?>">
+        <div class="d-flex justify-content-center mb-3">
+            <div class="post-thumbnail-container rounded-circle overflow-hidden d-flex justify-content-center align-items-center">
+                <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" class="img-fluid" alt="<?php the_title_attribute(); ?>">
+            </div>
+        </div>
     <?php endif; ?>
 
-    <div class="card-body">
-        <h2 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <div class="card-body text-center">
+        <h2 class="card-title text-secondary"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h2>
         <p class="card-text">
             <small class="text-muted">
                 <?php the_time( 'F j, Y' ); ?> by <?php the_author(); ?>
             </small>
         </p>
         <hr class="my-3 border-secondary-subtle"> <!-- Very light gray separator -->
-        <div class="card-text">
+        <div class="card-text text-start">
             <?php the_excerpt(); // Displays a short summary of the post content ?>
         </div>
         <div class="d-flex justify-content-end">
