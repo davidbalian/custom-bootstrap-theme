@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <div class="row site-body">
-    <main class="col-md-8 offset-md-2" role="main">
+    <main class="col-md-8" role="main">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <h1 class="display-4 my-5 text-center"><?php the_title(); ?></h1>
             <?php
@@ -22,6 +22,7 @@ get_header();
             <?php endif; ?>
         <?php endwhile; endif; ?>
     </main>
+    <?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?> 
