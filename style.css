@@ -67,22 +67,27 @@ footer p {
   color: #fff;
   opacity: 1;
   font-size: 1rem;
+  border-radius: 0;
 }
 .footer-newsletter-form .form-control::placeholder {
   color: #bbb;
   opacity: 0.5;
 }
-.footer-newsletter-form .btn-dark {
-  background: #23282c;
+.footer-newsletter-form .btn-newsletter {
+  background: #343a40;
   border: 1px solid #444;
   color: #fff;
+  border-radius: 0;
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 1.2rem;
   opacity: 1;
+  margin-left: -1px;
+  display: flex;
+  align-items: center;
 }
-.footer-newsletter-form .btn-dark:active,
-.footer-newsletter-form .btn-dark:focus {
-  background: #23282c;
+.footer-newsletter-form .btn-newsletter:active,
+.footer-newsletter-form .btn-newsletter:focus {
+  background: #343a40;
   color: #fff;
   box-shadow: none;
 }
