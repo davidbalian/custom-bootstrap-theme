@@ -12,6 +12,10 @@ main {
   margin: auto !important;
 }
 
+.page-template-single-page main {
+  margin: 0 !important;
+}
+
 .navbar {
     border-bottom: 2rem solid gray;
 }
