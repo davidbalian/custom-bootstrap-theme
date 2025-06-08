@@ -81,14 +81,22 @@
         <div>
             <h5 class="tags-widget-title">Tags</h5>
             <div class="tags-widget-list d-flex flex-wrap">
-                <span class="tag-badge m-1">OpenPGP</span>
-                <span class="tag-badge m-1">Django</span>
-                <span class="tag-badge m-1">Bitcoin</span>
-                <span class="tag-badge m-1">Security</span>
-                <span class="tag-badge m-1">GNU/Linux</span>
-                <span class="tag-badge m-1">Git</span>
-                <span class="tag-badge m-1">Homebrew</span>
-                <span class="tag-badge m-1">Debian</span>
+                <?php
+                $tags = get_tags(array(
+                    'orderby' => 'count',
+                    'order' => 'DESC',
+                    'number' => 20 // Limit to 20 most used tags
+                ));
+                
+                if ($tags) :
+                    foreach ($tags as $tag) : ?>
+                        <a href="<?php echo get_tag_link($tag->term_id); ?>" class="tag-badge m-1 text-decoration-none">
+                            <?php echo esc_html($tag->name); ?>
+                        </a>
+                    <?php endforeach;
+                else : ?>
+                    <span class="text-muted">No tags found</span>
+                <?php endif; ?>
             </div>
         </div>
     </section>
