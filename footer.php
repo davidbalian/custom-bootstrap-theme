@@ -65,10 +65,6 @@
                         </form>
                     </div>
                 </div>
-                <hr class="my-4 border-white-50">
-                <div class="text-center">
-                    <p>&copy; <?php echo date_i18n( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
-                </div>
             </div>
         </footer>
 
