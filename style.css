@@ -8,6 +8,10 @@
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+main {
+  margin: auto !important;
+}
+
 .navbar {
     border-bottom: 2rem solid gray;
 }
