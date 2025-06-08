@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="row">
+<div class="row site-body">
     <?php
     if ( have_posts() ) :
         while ( have_posts() ) : the_post();

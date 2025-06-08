@@ -9,7 +9,11 @@
 */
 
 .navbar {
-    border-bottom: 20px solid lightgray;
+    border-bottom: 2rem solid gray;
+}
+
+.navbar .container {
+    height: 4rem;
 }
 
 .navbar-brand {
@@ -37,4 +41,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.site-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
