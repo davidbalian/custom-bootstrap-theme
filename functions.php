@@ -39,3 +39,13 @@ function custom_bootstrap_theme_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'custom_bootstrap_theme_scripts');
+
+function customtheme_register_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'custom-bootstrap-theme'),
+            'footer'  => __('Footer Menu', 'custom-bootstrap-theme'),
+        )
+    );
+}
+add_action('after_setup_theme', 'customtheme_register_menus');
