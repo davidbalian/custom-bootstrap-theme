@@ -15,7 +15,7 @@
     <?php endif; ?>
 
     <div class="card-body text-center">
-        <h2 class="card-title text-secondary"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h2>
+        <h2 class="card-title text-dark"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h2>
         <p class="card-text">
             <small class="text-muted">
                 <?php the_time( 'F j, Y' ); ?> by <?php the_author(); ?>
