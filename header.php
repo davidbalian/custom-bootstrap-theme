@@ -32,6 +32,6 @@
         </nav>
     </header>
 
-    <div class="site-content container-fluid">
+    <div class="site-content container">
         <div class="row">
             <main class="col-md-8">
