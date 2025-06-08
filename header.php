@@ -34,4 +34,4 @@
 
     <div class="site-content container">
         <div class="row">
-            <main class="col-md-8">
+            <main class="col-md-12">
